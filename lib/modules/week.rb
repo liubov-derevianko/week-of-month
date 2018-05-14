@@ -56,6 +56,22 @@ module WeekOfMonth
       week_split[1].include?(day)
     end
 
+    # checks whether the given day lies in third week of month
+    # Date.new(2012,11,15).third_week?
+    #   => true
+    # @return [Boolean]
+    def third_week?
+      week_split[2].include?(day)
+    end
+
+    # checks whether the given day lies in third week of month
+    # Date.new(2012,11,22).fourth_week?
+    #   => true
+    # @return [Boolean]
+    def fourth_week?
+      week_split[3].include?(day)
+    end
+
     # checks whether the given day lies in last week of month
     # Date.new(2012,11,8).last_week?
     #   => false
